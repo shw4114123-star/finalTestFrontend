@@ -54,7 +54,7 @@ export default function RegisterPage() {
                     <option value={"Center"}>Center</option>
                 </select>
             </form>
-            <button type="submit" className="button" onClick={handel}>submit</button>
+            <button type="submit" className="button-register" onClick={handel}>submit</button>
         </div>
     )
 }

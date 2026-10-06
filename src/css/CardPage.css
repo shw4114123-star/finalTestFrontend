@@ -1,0 +1,27 @@
+.card-page{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 70px;
+    height: 66vh;
+    background-color: rgb(198, 253, 203);
+}
+.card-page h1{
+    font-size: 40px;
+}
+.card-page h4{
+    font-size: 20px;
+}
+.card-page h6{
+    font-size: 17px;
+}
+.card-page h5{
+    font-size: 15px;
+}
+.button-update{
+    height: 50px;
+    width: 90px;
+    background-color: rgb(142, 135, 126);
+}

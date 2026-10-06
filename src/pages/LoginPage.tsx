@@ -33,7 +33,7 @@ export default function LoginPage() {
             <input className="email" id="email " type="text" placeholder="" value={email} onChange={e => setEmail(e.target.value)} />
             <label htmlFor="password">password:</label>
             <input className="password" id="password" type="text" placeholder="" value={password} onChange={e => setPassword(e.target.value)} />
-            <button type="submit" onClick={handel}>login</button>
+            <button className="button-login" type="submit" onClick={handel}>login</button>
             <Link to={"/"}>Sign-up</Link>
         </div>
     )

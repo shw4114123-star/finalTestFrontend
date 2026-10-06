@@ -5,6 +5,7 @@ import AddAlertsPage from "./pages/AddAlertsPage";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+import CardPage from "./pages/CardPage";
 
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
         <Route element={<ProtectedRoute />}>
           <Route path="/map" element={<AlertsMapPage />} />
           <Route path="/add" element={<AddAlertsPage />} />
+          <Route path="/card" element={<CardPage/>}/>
         </Route>
       </Routes>
     </div>

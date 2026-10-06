@@ -1,19 +1,35 @@
-.card{
+.card {
     border: 1px solid black;
     display: flex;
     flex-direction: column;
     padding: 10px;
-    gap: 5px;
+    gap: 10px;
 }
-.alert{
+
+.alert {
     display: flex;
     justify-content: center;
     font-size: medium;
     color: blue;
 }
-.displayName-h4{
+
+.displayName-h4 {
     color: rgb(96, 96, 165);
 }
-.status-h5{
+
+.status-h5 {
     color: rgb(49, 49, 153);
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    height: 30px;
+}
+.button-details{
+    width: 45%;
+    text-decoration: none;
+}
+.button-delete{
+    width: 45%;
 }

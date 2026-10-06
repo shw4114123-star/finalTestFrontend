@@ -3,6 +3,7 @@
     padding: 10px;
     display: flex;
     justify-content: center;
+    background-color: rgb(140, 230, 200);
 }
 p{
     font-size: 10px;
