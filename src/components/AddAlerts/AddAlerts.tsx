@@ -5,10 +5,9 @@ import { useAlertsStore } from "../../store/alertsStore";
 
 const url = "http://localhost:3000/api/alerts";
 
-// מחזיר את הנתונים ומכניס לזוסטן צריך לבדוק למה צריך פעמיים ללחוץ ורק אז זה עובר למפה ואז זה מכניס פעמיים לדאטאבייס את הנתונים
+// לתקן את הטייפים
 
 export default function AddAlerts() {
-    const [data , setData] = useState()
     const navigate = useNavigate()
     const addAlert = useAlertsStore(s => s.addAlerts)
     const [displayName, setDisplayName] = useState("")
@@ -16,33 +15,35 @@ export default function AddAlerts() {
     const [priority, setPriority] = useState("Low")
     const [arena, setArena] = useState("North")
     const [status, setStatus] = useState("Active")
-    const [lon, setLon] = useState()
-    const [lat, setLat] = useState()
+    const [lon, setLon] = useState("")
+    const [lat, setLat] = useState("")
     const body = { displayName, description, priority, arena, status, lat: Number(lat), lon: Number(lon) }
     const handel = async () => {
-        await fetch(url, {
+        if (displayName.length === 0) return (alert("enter displayName"))
+        if (description.length === 0) return (alert("enter description"))
+        if (lon.length === 0) return (alert("enter lon"))
+        if (lat.length === 0) return (alert("enter lat"))
+        const response = await fetch(url, {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(body)
         })
-        .then(res=> res.json())
-        .then(data => setData(data))
-        console.log(data);
-        // if (!data) {return alert("Invalid input: expected string, received undefined") }
-        // if (data.success === false) { return (data.message) }
+        const data = await response.json()
+        if (!data) { return alert("No data available") }
+        if (data.success === false) { alert(data.message) }
         if (data.success === true) {
             addAlert(data.data)
-            navigate("/")
+            navigate("/map")
         }
     }
     return (
         <div className="add-alert">
             <h2 className="add">Add alert</h2>
             <label className="displayName">displayName:
-                <input type="text" placeholder="" value={displayName} onChange={e => setDisplayName(e.target.value)} />
+                <input className="input" type="text" placeholder="" value={displayName} onChange={e => setDisplayName(e.target.value)} />
             </label>
             <label className="description">description:
-                <input type="text" placeholder="" value={description} onChange={e => setDescriptoin(e.target.value)} />
+                <input className="input" type="text" placeholder="" value={description} onChange={e => setDescriptoin(e.target.value)} />
             </label>
             <label className="priority">priority:
                 <form>
@@ -72,10 +73,10 @@ export default function AddAlerts() {
                 </form>
             </label>
             <label className="lon">longitude:
-                <input type="number" value={lon} onChange={e => setLon(e.target.value)} />
+                <input className="input" type="number" value={lon} onChange={e => setLon(e.target.value)} />
             </label>
             <label className="lat">latitude:
-                <input type="number" value={lat} onChange={e => setLat(e.target.value)} />
+                <input className="input" type="number" value={lat} onChange={e => setLat(e.target.value)} />
             </label>
             <button type="submit" className="button" onClick={handel}>submit</button>
         </div >

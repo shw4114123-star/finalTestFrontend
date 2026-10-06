@@ -1,15 +1,20 @@
 import { Route, Routes } from "react-router";
 import AlertsMapPage from "./pages/AlertsMapPage";
-import AddAlerts from "./components/AddAlerts/AddAlerts";
+import Lyout from "./Lyout";
+import AddAlertsPage from "./pages/AddAlertsPage";
+import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/LoginPage";
 
 
 export default function App() {
   return (
     <div>
       <Routes>
-        <Route>
-          <Route path="/" element={<AlertsMapPage />} />
-          <Route path="/addAlert" element={<AddAlerts />} />
+        <Route element={<Lyout />}>
+          <Route path="/" element={<RegisterPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/map" element={<AlertsMapPage />} />
+          <Route path="/add" element={<AddAlertsPage />} />
         </Route>
       </Routes>
     </div>

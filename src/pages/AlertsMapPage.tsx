@@ -9,15 +9,15 @@ export default function AlertsMapPage() {
     const { data } = useFetch(url);
     const alerts = useAlertsStore(s => s.alerts);
     const setAlert = useAlertsStore(s => s.setAlerts)
+    const res = data
     console.log(alerts);
     console.log(data);
 
     useEffect(() => {
         if (data) {
-            setAlert(data.data)
+            setAlert(res.data)
         }
     }, [data, setAlert]);
-
     if (!data) return (<h1>...loading</h1>)
     else {
         return (

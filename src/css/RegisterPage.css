@@ -1,0 +1,34 @@
+.register {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 30px;
+    gap: 15px;
+    border: 1px solid black;
+    width: 230px;
+    margin-left: 40%;
+    background-color: rgb(215, 237, 237);
+}
+
+input {
+    padding: 15px;
+    background-color: rgb(209, 231, 224);
+}
+
+label {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+select {
+
+    background-color: rgb(209, 231, 224);
+}
+
+button {
+    background-color: rgb(209, 231, 224);
+}

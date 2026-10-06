@@ -1,0 +1,7 @@
+.all-page{
+    background-color: rgb(232, 206, 206);
+    height: 100vh;
+}
+.main{
+    flex: 1;
+}
