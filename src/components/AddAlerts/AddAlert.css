@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.add-alert {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    align-items: center;
+    padding: 10px;
+    gap: 15px;
+    width: 300px;
+    margin-left: 38%;
+    background-color: darkgray;
+}
+
+input {
+    padding: 10px;
+    background-color: antiquewhite;
+}
+
+select {
+    padding: 10px;
+    display: inline;
+}
+
+.button {
+    padding: 20px;
+}
+
+.displayName {
+    color: rgb(62, 50, 50);
+    background-color: darkgray;
+}
+
+.description {
+    color: rgb(62, 50, 50);
+    background-color: darkgray;
+}
+
+.priority {
+    color: rgb(62, 50, 50);
+    background-color: darkgray;
+}
+
+.arena {
+    color: rgb(62, 50, 50);
+    background-color: darkgray;
+}
+
+.status {
+    color: rgb(62, 50, 50);
+    background-color: darkgray;
+}
+
+.lon {
+    color: rgb(62, 50, 50);
+    background-color: darkgray;
+}
+
+.lat {
+    color: rgb(62, 50, 50);
+    background-color: darkgray;
+}
