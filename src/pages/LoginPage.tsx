@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router"
 const url = "http://localhost:3000/api/auth/login"
 
 export default function LoginPage() {
+    localStorage.clear()
     const navigate = useNavigate()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")

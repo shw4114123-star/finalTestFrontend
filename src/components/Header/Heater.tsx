@@ -14,7 +14,8 @@ export default function Heater() {
             <div className="links">
                 <Link to={"/add"}>add alert</Link>
                 <Link to={"/map"}>map</Link>
-                <Link to={"/users"}>users</Link>
+                {/* <Link to={"/users"}>users</Link> */}
+                <Link to={"/login"}>log-out</Link>
             </div>
         </div>
     )
