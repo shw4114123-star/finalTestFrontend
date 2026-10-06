@@ -1,7 +1,6 @@
 import { useState } from "react"
 import "../css/RegisterPage.css"
 import { useNavigate } from "react-router"
-// לתקן את הטייפים
 
 const url = "http://localhost:3000/api/auth/register"
 

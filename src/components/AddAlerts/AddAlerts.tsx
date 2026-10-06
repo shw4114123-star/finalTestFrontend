@@ -5,8 +5,6 @@ import { useAlertsStore } from "../../store/alertsStore";
 
 const url = "http://localhost:3000/api/alerts";
 
-// לתקן את הטייפים
-
 export default function AddAlerts() {
     const navigate = useNavigate()
     const addAlert = useAlertsStore(s => s.addAlerts)
