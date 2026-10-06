@@ -1,7 +1,10 @@
 .all-page{
-    background-color: rgb(232, 206, 206);
+    background-color: rgb(243, 241, 241);
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 .main{
     flex: 1;
+    height: 100px;
 }

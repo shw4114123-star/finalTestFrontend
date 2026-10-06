@@ -22,6 +22,8 @@ export default function LoginPage() {
         if (data.success === false) { alert(data.message) }
         if (data.success === true) {
             localStorage.setItem("TOKEN", data.data.token)
+            localStorage.setItem("USERNAME", data.data.userName)
+            localStorage.setItem("ROLE", data.data.role)
             navigate("/map")
         }
     }

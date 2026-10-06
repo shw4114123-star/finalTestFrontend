@@ -1,7 +1,7 @@
 import { create } from "zustand"
 
 
-interface Alert {
+export interface Alert {
     _id: string,
     displayName: string,
     description: string,

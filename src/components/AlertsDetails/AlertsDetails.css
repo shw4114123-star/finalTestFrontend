@@ -1,0 +1,7 @@
+.all-details{
+    overflow-y: scroll;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}

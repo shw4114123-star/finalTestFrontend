@@ -29,37 +29,37 @@ select {
     padding: 20px;
 }
 
-.displayName {
+.displayName label {
     color: rgb(62, 50, 50);
     background-color: darkgray;
 }
 
-.description {
+.description label {
     color: rgb(62, 50, 50);
     background-color: darkgray;
 }
 
-.priority {
+.priority label{
     color: rgb(62, 50, 50);
     background-color: darkgray;
 }
 
-.arena {
+.arena label{
     color: rgb(62, 50, 50);
     background-color: darkgray;
 }
 
-.status {
+.status label{
     color: rgb(62, 50, 50);
     background-color: darkgray;
 }
 
-.lon {
+.lon label{
     color: rgb(62, 50, 50);
     background-color: darkgray;
 }
 
-.lat {
+.lat label{
     color: rgb(62, 50, 50);
     background-color: darkgray;
 }

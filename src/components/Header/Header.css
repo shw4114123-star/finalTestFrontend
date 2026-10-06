@@ -1,0 +1,10 @@
+.header{
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+.links{
+    display: flex;
+    gap: 30px;
+}

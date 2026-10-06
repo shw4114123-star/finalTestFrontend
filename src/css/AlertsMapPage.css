@@ -1,0 +1,12 @@
+.map-page {
+    display: flex;
+    gap: 20px;
+    background-color: rgb(252, 243, 243);
+}
+.map{
+    flex: 2;
+    padding: 10px;
+    border: 2px solid black;
+    padding: 0;
+    height: 88%;
+}

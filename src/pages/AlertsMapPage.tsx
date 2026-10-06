@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import AlertsMap from "../components/AlertsMap/AlertsMap";
 import useFetch from "../hooks/useFetch";
 import { useAlertsStore } from "../store/alertsStore";
+import AlertsDetails from "../components/AlertsDetails/AlertsDetails";
+import "../css/AlertsMapPage.css"
 
 const url = "http://localhost:3000/api/alerts";
 
@@ -12,7 +14,7 @@ export default function AlertsMapPage() {
     const res = data
     console.log(alerts);
     console.log(data);
-
+    
     useEffect(() => {
         if (data) {
             setAlert(res.data)
@@ -21,8 +23,13 @@ export default function AlertsMapPage() {
     if (!data) return (<h1>...loading</h1>)
     else {
         return (
-            <div>
-                <AlertsMap alerts={alerts} />
+            <div className="map-page">
+                <div className="map">
+                    <AlertsMap alerts={alerts} />
+                </div>
+                <div className="details">
+                    <AlertsDetails />
+                </div>
             </div>
         )
     }
