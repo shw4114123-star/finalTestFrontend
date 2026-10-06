@@ -1,6 +1,6 @@
 import { useState } from "react"
 import "../css/LoginPage.css"
-import { useNavigate } from "react-router"
+import { Link, useNavigate } from "react-router"
 
 const url = "http://localhost:3000/api/auth/login"
 
@@ -32,6 +32,7 @@ export default function LoginPage() {
             <label htmlFor="password">password:</label>
             <input className="password" id="password" type="text" placeholder="" value={password} onChange={e => setPassword(e.target.value)} />
             <button type="submit" onClick={handel}>login</button>
+            <Link to={"/"}>Sign-up</Link>
         </div>
     )
 }
